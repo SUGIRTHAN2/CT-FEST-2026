@@ -42,6 +42,22 @@
                 </div>
             </section>
 
+            <!-- Staff Coordinator Section -->
+            {% if event.staff_coordinator %}
+            <section class="detail-section">
+                <h2 class="section-title">
+                    <span class="section-icon">👨‍🏫</span>
+                    Staff Coordinator
+                </h2>
+                <div class="section-content">
+                    <div class="coordinator-card">
+                        <div class="coordinator-name">{{ event.staff_coordinator.name }}</div>
+                        <div class="coordinator-designation">{{ event.staff_coordinator.designation }}</div>
+                    </div>
+                </div>
+            </section>
+            {% endif %}
+
             <!-- Description Section (if exists) -->
             {% if event.description %}
             <section class="detail-section">
@@ -323,6 +339,39 @@
         margin-bottom: 1rem;
     }
 
+    /* Staff Coordinator Styling */
+    .coordinator-card {
+        padding: 2rem;
+        background: rgba(45, 127, 249, 0.08);
+        border: 1px solid rgba(45, 127, 249, 0.3);
+        border-radius: 16px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .coordinator-card:hover {
+        background: rgba(45, 127, 249, 0.12);
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(45, 127, 249, 0.3);
+    }
+
+    .coordinator-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: var(--gradient-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 0.5rem;
+    }
+
+    .coordinator-designation {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+
     .round-description {
         padding: 1rem 1.5rem;
         background: rgba(45, 127, 249, 0.08);
@@ -549,6 +598,18 @@
         .detail-grid,
         .organizers-grid {
             grid-template-columns: 1fr;
+        }
+
+        .coordinator-card {
+            padding: 1.5rem;
+        }
+
+        .coordinator-name {
+            font-size: 1.5rem;
+        }
+
+        .coordinator-designation {
+            font-size: 1rem;
         }
 
         .apply-btn-large {

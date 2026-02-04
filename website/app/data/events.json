@@ -8,6 +8,10 @@
             "type": "Technical",
             "venue": "E-103",
             "time": "10.00 am to 12.00 pm",
+            "staff_coordinator": {
+                "name": "Dr R Subalakshmi",
+                "designation": "Assistant Professor"
+            },
             "organizers": [
                 "Nithyasree V (25BCT036)",
                 "Abinaya A (25BCT002)",
@@ -53,6 +57,10 @@
             "time": "1.00 pm to 3.00 pm",
             "date": "10.02.2024 (Tuesday)",
             "description": "Tech Puzzle is a technical event designed to evaluate participants' logical reasoning, programming fundamentals, aptitude, and problem-solving skills through structured rounds.",
+            "staff_coordinator": {
+                "name": "Dr K Padmavathi",
+                "designation": "Associate Professor"
+            },
             "organizers": [
                 "Abi Gail (24BCT001)",
                 "Tharshika K (24BCT053)"
@@ -100,6 +108,10 @@
             "type": "Technical",
             "venue": "E-105",
             "time": "12.15 pm to 2.00 pm",
+            "staff_coordinator": {
+                "name": "Dr C S Saradha",
+                "designation": "Associate Professor"
+            },
             "organizers": [
                 "Gopika M (23BCT019)",
                 "Deepika S (23BCT012)",
@@ -111,7 +123,7 @@
                 "Future of Jobs in the Digital World",
                 "Internet of Things (IoT) in Smart Homes",
                 "Entrepreneurship and Startup Culture in India",
-                "Participants are allowed to present papers on topics other than the listed ones, provided the content is professional, relevant, and aligned with the technical nature of the event."
+                "Participants can present papers on other topics if the content is professional, relevant, and technical."
             ],
             "rules": [
                 "Open to all departments within the college (UG & PG students).",
@@ -137,6 +149,10 @@
             "type": "Technical",
             "venue": "E-105",
             "time": "10.00 am to 12.30 pm",
+            "staff_coordinator": {
+                "name": "Ms V A Kanimozhi",
+                "designation": "Assistant Professor"
+            },
             "organizers": [
                 "Gopika M (23BCT019)",
                 "Deepika S (23BCT012)",
