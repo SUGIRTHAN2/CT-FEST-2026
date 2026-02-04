@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<canvas id="particleCanvas"></canvas>
+
+<div id="introContainer" class="intro-container">
+    <div id="titleContainer" class="title-container">
+    </div>
+    <div id="bullet" class="bullet"></div>
+    <div id="impactFlash" class="impact-flash"></div>
+</div>
+
+<div id="mainContent" class="main-content hidden">
+    <div class="content-wrapper">
+        <h1 class="main-title">CT FEST 2026</h1>
+
+        <div class="events-container" id="eventsContainer">
+            {% for event in events %}
+            <!-- Event {{ event.event_id }}: {{ event.title }} -->
+            <div class="event-card" data-event="{{ event.event_id }}">
+                <div class="event-card-front">
+                    <div class="event-number">{{ '%02d' % event.event_id }}</div>
+                    <div>
+                        <h2 class="event-title">{{ event.title }}</h2>
+                        <p class="event-brief">{{ event.brief }}</p>
+                        <div class="event-timing">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>{{ event.time }}</span>
+                        </div>
+                    </div>
+                    <div class="card-hover-indicator">
+                        <span>View Details</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

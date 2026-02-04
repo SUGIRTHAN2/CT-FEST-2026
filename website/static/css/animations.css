@@ -1,0 +1,746 @@
+ .bullet {
+     position: fixed;
+     width: 12px;
+     height: 30px;
+     left: 50%;
+     bottom: 20%;
+     transform: translateX(-50%);
+     z-index: 102;
+     pointer-events: none;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.8));
+ }
+
+ /* Bullet Structure - Glowing Blue Energy Projectile */
+ .bullet::before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 70%;
+     background: linear-gradient(to right,
+             #0a2d5f 0%,
+             #1a5fdc 20%,
+             #2d7ff9 40%,
+             #00d4ff 50%,
+             #2d7ff9 60%,
+             #1a5fdc 80%,
+             #0a2d5f 100%);
+     border-radius: 6px 6px 0 0;
+     box-shadow:
+         inset -3px 0 6px rgba(0, 0, 0, 0.5),
+         inset 3px 0 6px rgba(0, 212, 255, 0.6),
+         0 0 15px rgba(0, 212, 255, 0.8),
+         0 0 30px rgba(45, 127, 249, 0.6);
+     top: 0;
+     animation: bulletPulse 0.3s ease-in-out infinite;
+ }
+
+ @keyframes bulletPulse {
+
+     0%,
+     100% {
+         box-shadow:
+             inset -3px 0 6px rgba(0, 0, 0, 0.5),
+             inset 3px 0 6px rgba(0, 212, 255, 0.6),
+             0 0 15px rgba(0, 212, 255, 0.8),
+             0 0 30px rgba(45, 127, 249, 0.6);
+     }
+
+     50% {
+         box-shadow:
+             inset -3px 0 6px rgba(0, 0, 0, 0.5),
+             inset 3px 0 6px rgba(0, 212, 255, 0.8),
+             0 0 25px rgba(0, 212, 255, 1),
+             0 0 50px rgba(45, 127, 249, 0.8);
+     }
+ }
+
+ /* Bullet Casing - Blue Metallic */
+ .bullet::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 30%;
+     background: linear-gradient(to right,
+             #1a3a5c 0%,
+             #2d5f8c 30%,
+             #4d8fc9 50%,
+             #2d5f8c 70%,
+             #1a3a5c 100%);
+     bottom: 0;
+     box-shadow:
+         inset -2px 0 3px rgba(0, 0, 0, 0.4),
+         inset 2px 0 3px rgba(100, 180, 255, 0.3);
+ }
+
+ /* Muzzle Flash - Electric Blue */
+ .muzzle-flash {
+     position: fixed;
+     left: 50%;
+     bottom: 18%;
+     transform: translateX(-50%);
+     width: 120px;
+     height: 120px;
+     z-index: 101;
+     pointer-events: none;
+     opacity: 0;
+ }
+
+ .muzzle-flash::before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(circle,
+             rgba(255, 255, 255, 1) 0%,
+             rgba(0, 212, 255, 0.9) 15%,
+             rgba(45, 127, 249, 0.7) 30%,
+             rgba(0, 102, 255, 0.5) 50%,
+             rgba(26, 95, 220, 0.3) 70%,
+             transparent 90%);
+     border-radius: 50%;
+     filter: blur(2px);
+ }
+
+ .muzzle-flash::after {
+     content: '';
+     position: absolute;
+     width: 160%;
+     height: 50%;
+     left: -30%;
+     top: 25%;
+     background: linear-gradient(to right,
+             transparent 0%,
+             rgba(0, 212, 255, 0.9) 20%,
+             rgba(255, 255, 255, 1) 50%,
+             rgba(0, 212, 255, 0.9) 80%,
+             transparent 100%);
+     filter: blur(4px);
+     box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+ }
+
+ .muzzle-flash.active {
+     animation: muzzleFlashAnim 0.15s ease-out;
+ }
+
+ @keyframes muzzleFlashAnim {
+     0% {
+         opacity: 0;
+         transform: translateX(-50%) scale(0.3);
+     }
+
+     50% {
+         opacity: 1;
+         transform: translateX(-50%) scale(1.3);
+     }
+
+     100% {
+         opacity: 0;
+         transform: translateX(-50%) scale(1.8);
+     }
+ }
+
+ /* Bullet Shooting Animation - Enhanced */
+ .bullet.shooting {
+     animation: bulletShoot 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+ }
+
+ @keyframes bulletShoot {
+     0% {
+         bottom: 20%;
+         opacity: 1;
+         transform: translateX(-50%) scale(1) rotate(0deg);
+         filter: brightness(1) drop-shadow(0 0 8px rgba(0, 212, 255, 0.8));
+     }
+
+     10% {
+         bottom: 25%;
+         transform: translateX(-50%) scale(1.15) rotate(0deg);
+     }
+
+     100% {
+         bottom: 55%;
+         opacity: 1;
+         transform: translateX(-50%) scale(0.7) rotate(360deg);
+         filter: brightness(2.5) drop-shadow(0 0 25px rgba(0, 212, 255, 1));
+     }
+ }
+
+ /* Bullet Trail Effect - Blue Energy */
+ .bullet.shooting::before {
+     animation: bulletGlow 0.5s ease-out;
+ }
+
+ @keyframes bulletGlow {
+     0% {
+         box-shadow:
+             inset -3px 0 6px rgba(0, 0, 0, 0.5),
+             inset 3px 0 6px rgba(0, 212, 255, 0.6),
+             0 0 15px rgba(0, 212, 255, 0.8),
+             0 0 30px rgba(45, 127, 249, 0.6);
+     }
+
+     50% {
+         box-shadow:
+             inset -3px 0 6px rgba(0, 0, 0, 0.5),
+             inset 3px 0 6px rgba(0, 212, 255, 0.8),
+             0 0 40px rgba(0, 212, 255, 1),
+             0 0 80px rgba(45, 127, 249, 1),
+             0 -60px 50px rgba(0, 212, 255, 0.8);
+     }
+
+     100% {
+         box-shadow:
+             inset -3px 0 6px rgba(0, 0, 0, 0.5),
+             inset 3px 0 6px rgba(0, 212, 255, 1),
+             0 0 60px rgba(0, 212, 255, 1),
+             0 0 120px rgba(45, 127, 249, 1),
+             0 0 180px rgba(0, 102, 255, 0.8);
+     }
+ }
+
+ /* Motion Blur Trail - Electric Blue Stream */
+ .bullet-trail {
+     position: fixed;
+     left: 50%;
+     bottom: 20%;
+     width: 5px;
+     height: 0;
+     background: linear-gradient(to top,
+             rgba(0, 212, 255, 0) 0%,
+             rgba(0, 212, 255, 0.9) 40%,
+             rgba(255, 255, 255, 1) 70%,
+             rgba(0, 212, 255, 1) 100%);
+     transform: translateX(-50%);
+     z-index: 100;
+     pointer-events: none;
+     opacity: 0;
+     filter: blur(1px);
+     box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+ }
+
+ .bullet-trail.active {
+     animation: trailAnim 0.5s ease-out;
+ }
+
+ @keyframes trailAnim {
+     0% {
+         height: 0;
+         opacity: 0;
+     }
+
+     25% {
+         height: 120px;
+         opacity: 1;
+     }
+
+     100% {
+         height: 250px;
+         opacity: 0;
+         bottom: 55%;
+     }
+ }
+
+ /* Shell Casing Ejection - Blue Metallic */
+ .shell-casing {
+     position: fixed;
+     width: 8px;
+     height: 15px;
+     left: 48%;
+     bottom: 22%;
+     background: linear-gradient(135deg,
+             #1a3a5c 0%,
+             #2d5f8c 30%,
+             #4d8fc9 50%,
+             #2d5f8c 70%,
+             #1a3a5c 100%);
+     border-radius: 2px;
+     z-index: 99;
+     pointer-events: none;
+     opacity: 0;
+     box-shadow:
+         0 2px 6px rgba(0, 0, 0, 0.4),
+         inset 0 1px 2px rgba(100, 180, 255, 0.3);
+ }
+
+ .shell-casing.active {
+     animation: shellEject 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+ }
+
+ @keyframes shellEject {
+     0% {
+         opacity: 1;
+         transform: translate(0, 0) rotate(0deg);
+     }
+
+     50% {
+         opacity: 1;
+         transform: translate(-90px, -60px) rotate(720deg);
+     }
+
+     100% {
+         opacity: 0;
+         transform: translate(-140px, 120px) rotate(1080deg);
+     }
+ }
+
+ /* Gun Smoke Effect - Blue-tinted Smoke */
+ .gun-smoke {
+     position: fixed;
+     left: 50%;
+     bottom: 20%;
+     width: 70px;
+     height: 70px;
+     transform: translateX(-50%);
+     z-index: 98;
+     pointer-events: none;
+     opacity: 0;
+ }
+
+ .gun-smoke::before,
+ .gun-smoke::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(circle,
+             rgba(180, 220, 255, 0.5) 0%,
+             rgba(100, 180, 255, 0.4) 30%,
+             rgba(45, 127, 249, 0.2) 60%,
+             transparent 100%);
+     border-radius: 50%;
+ }
+
+ .gun-smoke::after {
+     animation-delay: 0.15s;
+ }
+
+ .gun-smoke.active::before {
+     animation: smokeRise 1.2s ease-out forwards;
+ }
+
+ .gun-smoke.active::after {
+     animation: smokeRise 1.4s ease-out forwards;
+ }
+
+ @keyframes smokeRise {
+     0% {
+         opacity: 0;
+         transform: translateY(0) scale(0.5);
+     }
+
+     25% {
+         opacity: 0.7;
+     }
+
+     100% {
+         opacity: 0;
+         transform: translateY(-180px) scale(3);
+     }
+ }
+
+ /* Impact Flash - Enhanced Blue Energy Burst */
+ .impact-flash {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 250px;
+     height: 250px;
+     background: radial-gradient(circle,
+             rgba(255, 255, 255, 1) 0%,
+             rgba(0, 212, 255, 1) 15%,
+             rgba(45, 127, 249, 0.9) 30%,
+             rgba(0, 102, 255, 0.7) 50%,
+             rgba(26, 95, 220, 0.4) 70%,
+             transparent 100%);
+     border-radius: 50%;
+     opacity: 0;
+     z-index: 103;
+     pointer-events: none;
+     filter: blur(0);
+ }
+
+ .impact-flash.active {
+     animation: impactFlashAnim 0.45s ease-out;
+ }
+
+ @keyframes impactFlashAnim {
+     0% {
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(0);
+         filter: blur(15px);
+     }
+
+     15% {
+         opacity: 0.4;
+         transform: translate(-50%, -50%) scale(0.8);
+         filter: blur(8px);
+     }
+
+     40% {
+         opacity: 0.9;
+         transform: translate(-50%, -50%) scale(1.4);
+         filter: blur(12px);
+     }
+
+     100% {
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(2.5);
+         filter: blur(25px);
+     }
+ }
+
+ /* Screen Recoil Shake */
+ .shake {
+     animation: recoilShake 0.3s ease-out;
+ }
+
+ @keyframes recoilShake {
+
+     0%,
+     100% {
+         transform: translate(0, 0);
+     }
+
+     10% {
+         transform: translate(-4px, 3px);
+     }
+
+     20% {
+         transform: translate(4px, -3px);
+     }
+
+     30% {
+         transform: translate(-3px, 4px);
+     }
+
+     40% {
+         transform: translate(3px, -4px);
+     }
+
+     50% {
+         transform: translate(-4px, 2px);
+     }
+
+     60% {
+         transform: translate(4px, -2px);
+     }
+
+     70% {
+         transform: translate(-2px, 3px);
+     }
+
+     80% {
+         transform: translate(2px, -3px);
+     }
+
+     90% {
+         transform: translate(-1px, 2px);
+     }
+ }
+
+ /* Bullet Impact Sparks - Electric Blue Energy Particles */
+ .spark-particle {
+     position: fixed;
+     width: 5px;
+     height: 14px;
+     background: linear-gradient(to bottom,
+             rgba(255, 255, 255, 1) 0%,
+             rgba(0, 212, 255, 1) 25%,
+             rgba(45, 127, 249, 0.9) 60%,
+             rgba(0, 102, 255, 0.6) 85%,
+             transparent 100%);
+     border-radius: 2px;
+     pointer-events: none;
+     z-index: 104;
+     box-shadow:
+         0 0 10px rgba(0, 212, 255, 1),
+         0 0 20px rgba(45, 127, 249, 0.8);
+ }
+
+ @keyframes sparkFly {
+     0% {
+         transform: translate(0, 0) scale(1) rotate(0deg);
+         opacity: 1;
+         box-shadow:
+             0 0 10px rgba(0, 212, 255, 1),
+             0 0 20px rgba(45, 127, 249, 0.8);
+     }
+
+     50% {
+         opacity: 1;
+         box-shadow:
+             0 0 15px rgba(0, 212, 255, 1),
+             0 0 30px rgba(45, 127, 249, 1);
+     }
+
+     100% {
+         transform: translate(var(--tx), var(--ty)) scale(0.2) rotate(720deg);
+         opacity: 0;
+         box-shadow:
+             0 0 5px rgba(0, 212, 255, 0.5),
+             0 0 10px rgba(45, 127, 249, 0.3);
+     }
+ }
+
+ /* Glass Shatter Effect - Blue-tinted Shards */
+ .glass-shatter {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 320px;
+     height: 320px;
+     pointer-events: none;
+     z-index: 103;
+ }
+
+ .glass-shard {
+     position: absolute;
+     width: 4px;
+     height: 45px;
+     background: linear-gradient(to bottom,
+             rgba(255, 255, 255, 0.9) 0%,
+             rgba(180, 220, 255, 0.7) 40%,
+             rgba(100, 180, 255, 0.5) 70%,
+             transparent 100%);
+     transform-origin: center;
+     opacity: 0;
+     box-shadow: 0 0 8px rgba(100, 180, 255, 0.6);
+ }
+
+ .glass-shard.active {
+     animation: shardFly 0.7s ease-out forwards;
+ }
+
+ @keyframes shardFly {
+     0% {
+         opacity: 1;
+         transform: translate(0, 0) rotate(0deg);
+         box-shadow: 0 0 8px rgba(100, 180, 255, 0.6);
+     }
+
+     100% {
+         opacity: 0;
+         transform: translate(var(--tx), var(--ty)) rotate(var(--rotate));
+         box-shadow: 0 0 4px rgba(100, 180, 255, 0.3);
+     }
+ }
+
+ /* Bullet Hole Effect - Blue Energy Burn Mark */
+ .bullet-hole {
+     position: fixed;
+     width: 24px;
+     height: 24px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: radial-gradient(circle,
+             rgba(0, 0, 0, 0.9) 0%,
+             rgba(10, 30, 60, 0.8) 30%,
+             rgba(26, 95, 220, 0.4) 60%,
+             rgba(45, 127, 249, 0.2) 80%,
+             transparent 100%);
+     border-radius: 50%;
+     z-index: 97;
+     pointer-events: none;
+     opacity: 0;
+     box-shadow:
+         inset 0 0 8px rgba(0, 0, 0, 0.9),
+         0 0 15px rgba(45, 127, 249, 0.6),
+         0 0 30px rgba(0, 212, 255, 0.4);
+ }
+
+ .bullet-hole.active {
+     animation: bulletHoleAppear 0.35s ease-out forwards;
+ }
+
+ @keyframes bulletHoleAppear {
+     0% {
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(0);
+     }
+
+     40% {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(1.4);
+     }
+
+     100% {
+         opacity: 0.8;
+         transform: translate(-50%, -50%) scale(1);
+     }
+ }
+
+ /* Shockwave Ring - Electric Blue Wave */
+ .shockwave-ring {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     width: 60px;
+     height: 60px;
+     border: 4px solid rgba(0, 212, 255, 1);
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 102;
+     pointer-events: none;
+     opacity: 0;
+     box-shadow:
+         0 0 20px rgba(0, 212, 255, 0.8),
+         inset 0 0 20px rgba(45, 127, 249, 0.6);
+ }
+
+ .shockwave-ring.active {
+     animation: shockwaveExpand 0.7s ease-out;
+ }
+
+ @keyframes shockwaveExpand {
+     0% {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(0);
+         border-width: 5px;
+         box-shadow:
+             0 0 20px rgba(0, 212, 255, 1),
+             inset 0 0 20px rgba(45, 127, 249, 0.8);
+     }
+
+     50% {
+         opacity: 0.8;
+         border-width: 3px;
+         box-shadow:
+             0 0 40px rgba(0, 212, 255, 0.8),
+             inset 0 0 40px rgba(45, 127, 249, 0.6);
+     }
+
+     100% {
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(10);
+         border-width: 1px;
+         box-shadow:
+             0 0 60px rgba(0, 212, 255, 0.4),
+             inset 0 0 60px rgba(45, 127, 249, 0.3);
+     }
+ }
+
+ /* Energy Pulse Rings - Additional Impact Effect */
+ .energy-pulse {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     width: 80px;
+     height: 80px;
+     border: 2px solid rgba(0, 212, 255, 0.8);
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 101;
+     pointer-events: none;
+     opacity: 0;
+ }
+
+ .energy-pulse.active {
+     animation: energyPulseExpand 0.8s ease-out;
+ }
+
+ @keyframes energyPulseExpand {
+     0% {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(0.5);
+         border-width: 3px;
+     }
+
+     70% {
+         opacity: 0.5;
+         border-width: 1px;
+     }
+
+     100% {
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(12);
+         border-width: 0;
+     }
+ }
+
+ /* Electrical Arc Effect - Blue Lightning */
+ .electric-arc {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     width: 2px;
+     height: 40px;
+     background: linear-gradient(to bottom,
+             rgba(255, 255, 255, 1) 0%,
+             rgba(0, 212, 255, 1) 50%,
+             transparent 100%);
+     transform: translate(-50%, -50%);
+     z-index: 105;
+     pointer-events: none;
+     opacity: 0;
+     box-shadow: 0 0 15px rgba(0, 212, 255, 1);
+ }
+
+ .electric-arc.active {
+     animation: arcFlash 0.3s ease-out;
+ }
+
+ @keyframes arcFlash {
+
+     0%,
+     100% {
+         opacity: 0;
+     }
+
+     20%,
+     80% {
+         opacity: 1;
+     }
+
+     50% {
+         opacity: 0.7;
+     }
+ }
+
+ /* Responsive adjustments */
+ @media (max-width: 768px) {
+     .bullet {
+         width: 10px;
+         height: 25px;
+     }
+
+     .muzzle-flash {
+         width: 90px;
+         height: 90px;
+     }
+
+     .impact-flash {
+         width: 180px;
+         height: 180px;
+     }
+
+     .shockwave-ring {
+         width: 50px;
+         height: 50px;
+     }
+
+     .glass-shatter {
+         width: 250px;
+         height: 250px;
+     }
+ }
+
+ /* Dark Mode Enhancements */
+ @media (prefers-color-scheme: dark) {
+     .bullet::before {
+         box-shadow:
+             inset -3px 0 6px rgba(0, 0, 0, 0.7),
+             inset 3px 0 6px rgba(0, 212, 255, 0.8),
+             0 0 20px rgba(0, 212, 255, 1),
+             0 0 40px rgba(45, 127, 249, 0.8);
+     }
+
+     .impact-flash {
+         filter: brightness(1.2);
+     }
+ }

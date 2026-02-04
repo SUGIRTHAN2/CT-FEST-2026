@@ -1,0 +1,163 @@
+# CT FEST'26 - Tech Festival Website
+
+A modern, interactive tech festival website featuring cinematic animations, event listings, and a stunning blue theme.
+
+## ✨ Features
+
+- 🎬 **Cinematic Intro Animation** - Bullet-style text reveal with particle effects
+- 🎨 **Modern Blue Theme** - Rich electric blue color palette with smooth animations
+- 📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile
+- ⚡ **Fast & Optimized** - Performance-optimized particle system and animations
+- ♿ **Accessible** - Keyboard navigation and ARIA labels support
+- 🎯 **Event Management** - Individual pages for each event with detailed information
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.8+
+- Flask
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/ct-fest-26.git
+cd ct-fest-26
+```
+
+2. **Create virtual environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. **Install dependencies**
+```bash
+pip install flask
+```
+
+4. **Run the application**
+```bash
+python run.py
+```
+
+5. **Open your browser**
+```
+http://localhost:5000
+```
+
+## 📁 Project Structure
+
+```
+ct-fest-26/
+├── app/
+│   ├── routes/
+│   │   └── main_routes.py
+│   ├── data/
+│   │   └── events.json
+│   └── __init__.py
+├── static/
+│   ├── css/
+│   │   ├── main.css
+│   │   └── animations.css
+│   └── js/
+│       ├── events.js
+│       ├── intro.js
+│       └── particles.js
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── event_detail.html
+│   └── 404.html
+├── run.py
+├── requirements.txt
+└── README.md
+```
+
+## 🎨 Color Palette
+
+- **Primary Blue**: `#2d7ff9`
+- **Electric Blue**: `#00d4ff`
+- **Royal Blue**: `#0066ff`
+- **Dark Background**: `#0a0e17`
+
+## 🎯 Events
+
+The festival features 6 exciting events:
+1. **Code Sprint** - Competitive Programming Challenge
+2. **Hackathon** - 24-Hour Innovation Marathon
+3. **Web Design Battle** - UI/UX Design Showdown
+4. **Tech Quiz** - Knowledge Championship
+5. **AI/ML Workshop** - Hands-on Learning Experience
+6. **Gaming Tournament** - E-Sports Championship
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Flask (Python)
+- **Animations**: Custom CSS animations & Canvas API
+- **Design**: Glass morphism, Particle effects
+
+## 📝 Customization
+
+### Update Events
+Edit `app/data/events.json` to modify event details:
+```json
+{
+    "events": [
+        {
+            "event_id": 1,
+            "title": "Your Event",
+            "brief": "Short description",
+            "description": "Full description...",
+            "rules": ["Rule 1", "Rule 2"],
+            "form_link": "https://forms.google.com/...",
+            "max_participants": 100,
+            "team_size": 1
+        }
+    ]
+}
+```
+
+### Change Colors
+Modify CSS variables in `static/css/main.css`:
+```css
+:root {
+    --accent-color: #2d7ff9;
+    --accent-light: #4d9aff;
+    --electric-blue: #00d4ff;
+    /* ... */
+}
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Your Name - [Your GitHub Profile](https://github.com/yourusername)
+
+## 🙏 Acknowledgments
+
+- Inspired by modern web design trends
+- Particle system based on Canvas API
+- Animation effects inspired by cinematic experiences
+
+## 📞 Contact
+
+Project Link: [https://github.com/yourusername/ct-fest-26](https://github.com/yourusername/ct-fest-26)
+
+---
+
+**⭐ Star this repo if you find it useful!**
