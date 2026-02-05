@@ -63,7 +63,8 @@
             },
             "organizers": [
                 "Abi Gail (24BCT001)",
-                "Tharshika K (24BCT053)"
+                "Tharshika K (24BCT053)",
+                "Roshiv Balakrishnan (24BCT049)"
             ],
             "topics": [],
             "rounds": [
@@ -89,7 +90,7 @@
                 }
             ],
             "rules": [
-                "Participation is individual or in teams of 2–3 members.",
+                "Participation is individual or in teams of 2 members.",
                 "Mobile phones and electronic gadgets are strictly prohibited.",
                 "Each round has a fixed time limit.",
                 "Evaluation is based on accuracy and speed.",
@@ -148,34 +149,55 @@
             "year": "III Year",
             "type": "Technical",
             "venue": "E-105",
-            "time": "10.00 am to 12.30 pm",
+            "time": "10.00 am to 1.30 pm",
             "staff_coordinator": {
                 "name": "Ms V A Kanimozhi",
                 "designation": "Assistant Professor"
             },
             "organizers": [
-                "Gopika M (23BCT019)",
-                "Deepika S (23BCT012)",
-                "Kaviya N S (23BCT031)"
+                "Vaibhav (23BCT060)",
+                "Manush Nanthan (23BCT038)",
+                "Meenakshi (23BCT039)"
             ],
-            "topics": [
-                "Digital Payments and Cashless Economy",
-                "Financial Literacy for Youth",
-                "Future of Jobs in the Digital World",
-                "Internet of Things (IoT) in Smart Homes",
-                "Entrepreneurship and Startup Culture in India"
+            "topics": [],
+            "rounds": [
+                {
+                    "title": "Round 1: MCQ & Fill Ups",
+                    "rules": [
+                        "30 Questions in the game.",
+                        "Each Question is displayed for 60 Seconds.",
+                        "2 Members per Team.",
+                        "Each Question should have only one answer. If more than 1 answer is written, the answer is invalid.",
+                        "Questions will be in the form of MCQ & Fill-ups (General + Technical).",
+                        "Star Questions Carry Extra Marks.",
+                        "Based on overall performance, the top half of the total teams shall qualify for the subsequent round."
+                    ]
+                },
+                {
+                    "title": "Round 2: Logo & Connections",
+                    "rules": [
+                        "Questions are based on commonly used tools.",
+                        "Each Question is displayed for 60 Seconds.",
+                        "Based on performance in the second round, the top one-fourth of the teams shall advance to the final round."
+                    ]
+                },
+                {
+                    "title": "Round 3: Spot Tech & Actrix",
+                    "rules": [
+                        "The Third round consists of spotting the technology and Dumb Charades",
+                        "Each Question is only for 60 Seconds",
+                        "Strict Time Limit must be followed",
+                        "Spot the Tech: Identify Technology, Write Name, Purpose & Usage",
+                        "Actrix: Technology terms will be given to you, and you need to act. Each action needs to be performed in given time."
+                    ]
+                }
             ],
             "rules": [
-                "Open to all departments within the college (UG & PG students).",
-                "Participation can be individual or in a team of up to 2 members.",
-                "Each team can submit one original paper.",
-                "Presentation time: Maximum 5 minutes (including Q&A).",
-                "Presentation must be in PPT format (Minimum 10 Slides) and it should be upload prior to the deadline.",
-                "Presentation language: English.",
-                "Plagiarism is strictly prohibited.",
-                "Participants must carry a college ID card.",
-                "Judges' decision will be final.",
-                "Participation and merit certificates will be provided."
+                "2 members per team.",
+                "Each question should have only one answer. If more than 1 answer is written, the answer is invalid.",
+                "Strict time limits must be followed for all rounds.",
+                "Based on performance, teams will be eliminated after each round.",
+                "Judges' decision will be final."
             ],
             "form_link": "https://forms.gle/He9FQzr95hMtzE3w5",
             "team_size": 2
