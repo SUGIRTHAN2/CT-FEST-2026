@@ -18,9 +18,9 @@
                 "Pragathi K (25BCT041)"
             ],
             "topics": [],
-            "sub_events": [
+            "rounds": [
                 {
-                    "title": "Logical Quiz",
+                    "title": "Round 1: Logical Quiz",
                     "rules": [
                         "20 questions in the game.",
                         "Each question is displayed for 60 seconds.",
@@ -30,7 +30,7 @@
                     ]
                 },
                 {
-                    "title": "Code Relay",
+                    "title": "Round 2: Code Relay",
                     "rules": [
                         "2 members per team.",
                         "Each team is given one problem.",
@@ -43,7 +43,14 @@
                     ]
                 }
             ],
-            "rules": [],
+            "rules": [
+                "Participation is in teams of 2 members.",
+                "Mobile phones and electronic gadgets are strictly prohibited.",
+                "Evaluation is based on accuracy and speed.",
+                "Teams will be eliminated after each round.",
+                "Any malpractice will result in disqualification.",
+                "Judges' and coordinators' decisions are final."
+            ],
             "form_link": "https://forms.gle/NpuFJXSmJ2js9Wii8",
             "team_size": 2
         },
@@ -56,7 +63,7 @@
             "venue": "E-104",
             "time": "1.00 pm to 3.00 pm",
             "date": "10.02.2024 (Tuesday)",
-            "description": "Tech Puzzle is a technical event designed to evaluate participants' logical reasoning, programming fundamentals, aptitude, and problem-solving skills through structured rounds.",
+            "description": "Tech Nova is a technical event designed to evaluate participants' digital awareness, cyber safety knowledge, and decision-making skills through structured rounds.",
             "staff_coordinator": {
                 "name": "Dr K Padmavathi",
                 "designation": "Associate Professor"
@@ -69,28 +76,27 @@
             "topics": [],
             "rounds": [
                 {
-                    "title": "Round 1: Logical & Pattern Puzzles",
-                    "description": "Logical reasoning, number series, and pattern-based puzzles.",
-                    "rules": []
+                    "title": "Round 1: Tech Foundations",
+                    "description": "This is a basic awareness and understanding round.",
+                    "rules": [
+                        "Questions are direct and concept-based.",
+                        "No calculations or complex reasoning required.",
+                        "Answers are based on everyday usage of technology.",
+                        "Apply simple logic based on experience with devices and the internet."
+                    ]
                 },
                 {
-                    "title": "Round 2: Technical Basics & Binary",
-                    "description": "Computer fundamentals, binary decoding, and basic technical questions.",
-                    "rules": []
-                },
-                {
-                    "title": "Round 3: Programming Logic & Debugging",
-                    "description": "Predicting outputs, identifying errors, and applying coding logic.",
-                    "rules": []
-                },
-                {
-                    "title": "Round 4: Final Puzzle Challenge",
-                    "description": "Rapid puzzle round for shortlisted teams to decide winners.",
-                    "rules": []
+                    "title": "Round 2: Digital Defenders",
+                    "description": "This is a scenario-based decision and awareness round.",
+                    "rules": [
+                        "Each question is framed as a real-life situation.",
+                        "Participants must choose the most appropriate explanation/option.",
+                        "Emphasis is on judgment and awareness, not memorization."
+                    ]
                 }
             ],
             "rules": [
-                "Participation is individual or in teams of 2 members.",
+                "Participation is in teams of 2 members.",
                 "Mobile phones and electronic gadgets are strictly prohibited.",
                 "Each round has a fixed time limit.",
                 "Evaluation is based on accuracy and speed.",
@@ -144,7 +150,7 @@
         },
         {
             "event_id": 4,
-            "title": "Tech sprint",
+            "title": "Tech Sprint",
             "brief": "Technical Event",
             "year": "III Year",
             "type": "Technical",
@@ -157,7 +163,8 @@
             "organizers": [
                 "Vaibhav (23BCT060)",
                 "Manush Nanthan (23BCT038)",
-                "Meenakshi (23BCT039)"
+                "Meenakshi (23BCT039)",
+                "Kalidhasan (23BCT026)"
             ],
             "topics": [],
             "rounds": [
